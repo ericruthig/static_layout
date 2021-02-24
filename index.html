@@ -11,13 +11,13 @@
 <body>
     <header class='head'>
         <nav class='login'>LOGIN</nav>
-        <div class='trial'><h5>COME ON DOWN GETCHU A FREE TRIAL</h5></div>
+        <div class='trial'><h5>COME ON AN' GETCHU A FREE TRIAL</h5></div>
         <img class='title' src='https://hulu-matchmaker.s3.us-west-2.amazonaws.com/2020-08/Hulu_Logo-01_newgreen.png'>
         <div class='titlePage'>
             <div class='greeting'>
                 <h4>"COME ON, IT'LL BE FUN"</h4>
                 <h5>Plan pricing is cheap and we got all kinds of shows, honest!</h5>
-                <br>They even got free CABLE TV channels</br>
+                <br>They even got free CABLE TV channels!</br>
                 <button class='startBtn' onclick='window.location.href="https://signup.hulu.com/plans";'>START THE FREE TRIAL</button>
                 <h6>this constitutes the fine print section</h6>
             </div>
@@ -25,78 +25,134 @@
     </header>
     <div class='break'>
         <img class='breakImg' src="https://www.hulu.com/static/hitch/s3/attachments/ckapuzxob47sd0w7l9l74op5z-d-logo-0-1.png" position='left'>
-        <div class='offer'><h3>Y'all get Disney, Hulu, all type 'a' stuff bundled all together like dang ol' $12.99.</h3>
-           <button class='get'>GET BUNDLE</button>
+        <div class='offer'><h3>Y'all get Disney, Hulu, all type a' stuff all bundled all like, dang ol' $12.99.</h3>
+           <button class='get' onclick="window.location.href='https://www.hulu.com/disney-bundle-3';">GET BUNDLE</button>
         </div>
-      <a class='details'>DETAILS</a>
-      <div class='detailsBox'>
-      <div class="detailsHeader">
-    <span class="close">&times;</span>
-    <h2>What's included?</h2>
-  </div>
-  <div class="detailsModal">
-    <p> The Disney Bundle includes subscriptions to Disney+, ESPN+, and the Hulu plan of your choice for a discounted price.
-
-    The Disney Bundle is available with Hulu (ad-supported) for $12.99/month, with Hulu (No Ads) for $18.99/month, or with Hulu + Live TV for $71.99/month.
-
-    Savings of $5.98/month compared to the retail price of each service when purchased separately.
-
-     Stream The Disney Bundle content using the Disney+, Hulu, and ESPN apps (or sites, for those on a browser). Download each app separately to access each service.
-
-    Cancel anytime.
-
-    No free trial available. You must be 18 years or older to sign up.</p>
-    <p>Some other text...</p>
-  </div>
-</div>
-  <div class='included'>See what's included
+    
+        <button onclick="document.getElementById('details').style.display='block'">DETAILS</button>  
+          <div class="detailsContent" id="details">
+            <div class='detailsHeader'>
+              <span onclick="document.getElementById('details').style.display='none'">&times;</span> 
+              <div class='detailsBody'>
+                <p> The Disney Bundle includes subscriptions to Disney+, ESPN+, and the Hulu plan of your choice for a discounted price.
+                The Disney Bundle is available with Hulu (ad-supported) for $12.99/month, with Hulu (No Ads) for $18.99/month, or with Hulu + Live TV for $71.99/month.
+                Savings of $5.98/month compared to the retail price of each service when purchased separately.
+                Stream The Disney Bundle content using the Disney+, Hulu, and ESPN apps (or sites, for those on a browser). Download each app separately to access each service.
+                Cancel anytime.
+                No free trial available. You must be 18 years or older to sign up.
+                </p>
+              </div> 
+           </div>     
+          </div>
+        
+    </div>
+  <div class='included'>INCLUDED
     <h2>All TV Shows Known To Mankind</h2>
       <h5>Stream full seasons of exclusive series, current-season episodes, hit movies, Hulu Originals, kids shows, and more.</h5>
     <div class='imgs'>
-        <img src='https://fanart.tv/fanart/tv/176941/tvposter/sherlock-52b60767a30c9.jpg' id='img1' style="width:100%;max-width:300px">
-        <div id='imgModal' class='modal'>
-            <span class="close">&times;</span>
-            <img class='modalContent' id='img01'>
+        <a><img src='https://fanart.tv/fanart/tv/176941/tvposter/sherlock-52b60767a30c9.jpg' id='img1' style="width:100%;max-width:300px">
+          <div id='imgModal' class='modal'>
+            <span onclick="document.getElementById('imgModal').style.display='none'">&times;</span>
+            <img class='modalContent' id='img01' src='https://i.ytimg.com/vi/vu3asSCGVNc/maxresdefault.jpg'>
             <div class='caption'>TV Shows</div>    
-        </div>
-
-        <img src='https://image.tmdb.org/t/p/original/v1elcjxyY5326kVnxKRliPvDiZJ.jpg' id='img2'>
-        <div id='imgModal' class='modal'>
-          <span class="close">&times;</span>
-          <img class='modalContent' id='img01'>
-          <div class='caption'>TV Shows</div>    
+          </div>
+        </a>
+        <a>
+          <img src='https://image.tmdb.org/t/p/original/v1elcjxyY5326kVnxKRliPvDiZJ.jpg' id='img2'>
+          <div id='imgModal' class='modal'>
+            <span onclick="document.getElementById('imgModal').style.display='none'">&times;</span>
+            <img class='modalContent' id='img02'>
+            <div class='caption'>Movies</div>
+          </div>
+        </a>
+        <a>  
         <img src='https://fanart.tv/fanart/movies/812/movieposter/aladdin-56ad1b8aeb914.jpg' id='img3'>
         <div id='imgModal' class='modal'>
-          <span class="close">&times;</span>
-          <img class='modalContent' id='img01'>
-          <div class='caption'>TV Shows</div>    
-        <img src='http://images.moviepostershop.com/the-twilight-zone-tv-movie-poster-2002-1020478176.jpg' id='img4'> 
-        <div id='imgModal' class='modal'>
-          <span class="close">&times;</span>
-          <img class='modalContent' id='img01'>
-          <div class='caption'>TV Shows</div>    
+          <span onclick="document.getElementById('imgModal').style.display='none'">&times;</span>
+          <img class='modalContent' id='img03'>
+          <div class='caption'>Originals</div>
+        </div>
+        </a>
+        <a>
+          <img src='http://images.moviepostershop.com/the-twilight-zone-tv-movie-poster-2002-1020478176.jpg' id='img4'> 
+          <div id='imgModal' class='modal'>
+            <span onclick="document.getElementById('imgModal').style.display='none'">&times;</span>
+            <img class='modalContent' id='img04'>
+            <div class='caption'>Premuim</div>   
+          </div>
+        </a>    
+      </div>  
    </div>  
     <div class='plans'>
         <table>
             <tr>
-              <th style="width:50%">Features</th>
+              <th style="width:50%">CHOOSE YOUR PLAN</th>
               <th>Basic</th>
               <th>Pro</th>
+              <th>El Capitan</th>
             </tr>
             <tr>
-              <td>Sample text</td>
+              <td>Features</td>
+              <td><i class="fa fa-remove"></i></td>
               <td><i class="fa fa-remove"></i></td>
               <td><i class="fa fa-check"></i></td>
             </tr>
             <tr>
-              <td>Sample text</td>
+              <td>Upon Features</td>
+              <td><i class="fa fa-remove"></i></td>
+              <td><i class="fa fa-remove"></i></td>
+              <td><i class="fa fa-check"></i></td>
+            </tr>
+            <tr>
+              <td>Limitless Options</td>
+              <td><i class="fa fa-remove"></i></td>
+              <td><i class="fa fa-remove"></i></td>
+              <td><i class="fa fa-check"></i></td>
+            </tr>
+            <tr>
+              <td>Additional Categories</td>
+              <td><i class="fa fa-remove"></i></td>
+              <td><i class="fa fa-remove"></i></td>
+              <td><i class="fa fa-check"></i></td>
+            </tr>
+            <tr>
+              <td>Ancillary Benefits</td>
+              <td><i class="fa fa-remove"></i></td>
               <td><i class="fa fa-check"></i></td>
               <td><i class="fa fa-check"></i></td>
             </tr>
-        </table> </div>                                                                                                      
-                                                                                                      
-  
-   
+            <tr>
+              <td>Further Benefits</td>
+              <td><i class="fa fa-remove"></i></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-check"></i></td>
+            </tr>
+            <tr>
+              <td>Mad Hookups</td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-check"></i></td>
+            </tr>
+            <tr>
+              <td>Monthly Tea Parties</td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-check"></i></td>
+              </tr>
+            <tr>
+            <td>Remote Start</td>
+            <td><i class="fa fa-check"></i></td>
+            <td><i class="fa fa-check"></i></td>
+            <td><i class="fa fa-check"></i></td>
+            </tr>
+            <tr>
+            <td>Complementary Carwash</td>
+            <td><i class="fa fa-check"></i></td>
+            <td><i class="fa fa-check"></i></td>
+            <td><i class="fa fa-check"></i></td>
+            </tr>
+        </table> 
+      </div>                                                                                                      
 </body>
 <footer><script src="js.js"></script></footer>
 </html>

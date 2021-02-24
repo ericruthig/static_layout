@@ -103,10 +103,9 @@ header {
   color: white;
 }
 
+.detailsBody{padding: 2px 16px;}
 
-.detailsModal {padding: 2px 16px;}
-
-.detailsBox {
+.detailsContent {
   position: relative;
   background-color: #fefefe;
   margin: auto;
@@ -118,6 +117,11 @@ header {
   animation-duration: 0.4s
 }
 
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
+}
+
 .imgs {
   display: flex;
   flex-wrap: wrap;
@@ -127,8 +131,8 @@ header {
 }
 
 #img1 {
-    max-height: 400px;
-    max-width: 300px;
+    max-height: 30%;
+    max-width: 100px;
     cursor: pointer;
     transition: .0s;
     border-radius: 5px;
@@ -154,6 +158,20 @@ header {
     background-color: rgba(0,0,0,0.9);
 }
 
+.detailsModal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.9);
+}
+
 .modalContent {
   margin: auto;
   display: block;
@@ -172,9 +190,32 @@ header {
     height: 150px;
   }
 
-  .modalContent, #caption{
+.modalContent, #detailsCaption{
     animation-name: zoom;
     animation-duration: 0.6s;
+}
+
+#detailsCaption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+.detailsContent {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.detailsContent, #detailsCaption{
+  animation-name: zoom;
+  animation-duration: 0.6s;
 }
 
 @keyframes zoom {
@@ -183,45 +224,68 @@ header {
 }
 
 #img2 {
-    max-height: 400px;
-    max-width: 300px;
-    padding: 5px;
+  max-height: 30%;
+  max-width: 200px;
+  cursor: pointer;
+  transition: .0s;
+  border-radius: 5px;
+  padding: 5px;
+  margin: auto;
+}
+
+#img2:hover {
+  opacity: 07;
 }
 
 #img3 {
-    max-height: 400px;
-    max-width: 300px;
-    padding: 5px;
+  max-height: 30%;
+  max-width: 200px;
+  cursor: pointer;
+  transition: .0s;
+  border-radius: 5px;
+  padding: 5px;
+  margin: auto;
 }
 
-.close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-  
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
+#img3:hover {
+  opacity: 07;
 }
   
 #img4 {
-    max-height: 400px;
-    max-width: 300px;
-    padding: 5px;
+  max-height: 400px;
+  max-width: 300px;
+  cursor: pointer;
+  transition: .0s;
+  border-radius: 5px;
+  padding: 5px;
+  margin: auto;
+}
+
+#img4:hover {
+  opacity: 07;
 }
 
 @media only screen and (max-width: 700px){
     .modalContent {
       width: 100%;
     }
+}
 
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .included {
@@ -230,33 +294,30 @@ header {
   text-align: center;
 }
 
- /* Style the table */
- table {
+table {
     border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
     border: 1px solid #ddd;
   }
-  
-  /* Style table headers and table data */
-  th, td {
+
+th, td {
     text-align: center;
     padding: 16px;
   }
   
-  th:first-child, td:first-child {
+th:first-child, td:first-child {
     text-align: left;
-  }
+}
   
-  /* Zebra-striped table rows */
-  tr:nth-child(even) {
+tr:nth-child(even) {
     background-color: #f2f2f2
-  }
-  
-  .fa-check {
+}
+
+.fa-check {
     color: green;
-  }
+}
   
-  .fa-remove {
+.fa-remove {
     color: red;
-  } 
+} 
